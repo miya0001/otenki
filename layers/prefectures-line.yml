@@ -7,9 +7,8 @@ layout:
 paint:
   line-color: "#FFFFFF"
   line-width:
-    base: 1.2
     stops:
-      - - 0
-        - 0
-      - - 10
-        - 5
+      - - 5
+        - 0.1
+      - - 16
+        - 14

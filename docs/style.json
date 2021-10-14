@@ -1,20 +1,7 @@
 {
   "version": 8,
   "name": "Otenki",
-  "metadata": {},
   "sources": {
-    "oceanus": {
-      "type": "vector",
-      "url": "https://tileserver.geolonia.com/oceanus/tiles.json?key=YOUR-API-KEY"
-    },
-    "geolonia-water": {
-      "type": "vector",
-      "url": "https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY"
-    },
-    "geolonia": {
-      "type": "vector",
-      "url": "https://tileserver.geolonia.com/v2/tiles.json?key=YOUR-API-KEY"
-    },
     "geolonia-prefectures": {
       "type": "vector",
       "url": "https://cdn.geolonia.com/tiles/japanese-prefectures.json"
@@ -42,7 +29,16 @@
       "source": "geolonia-prefectures",
       "source-layer": "prefectures",
       "paint": {
-        "fill-color": "#14921E"
+        "fill-color": "#248733"
+      }
+    },
+    {
+      "id": "prefectures-overlay",
+      "type": "fill",
+      "source": "geolonia-prefectures",
+      "source-layer": "prefectures",
+      "paint": {
+        "fill-color": "transparent"
       }
     },
     {
@@ -50,8 +46,8 @@
       "source": "dem",
       "type": "hillshade",
       "paint": {
-        "hillshade-exaggeration": 0.2,
-        "hillshade-shadow-color": "#14921E"
+        "hillshade-exaggeration": 0.1,
+        "hillshade-shadow-color": "#000000"
       }
     },
     {
@@ -65,20 +61,33 @@
       "paint": {
         "line-color": "#000000",
         "line-blur": 10,
-        "line-translate": [
-          1,
-          1
-        ],
-        "line-width": {
-          "base": 1.2,
+        "line-translate": {
           "stops": [
             [
-              0,
-              2
+              5,
+              [
+                0.1,
+                0.1
+              ]
             ],
             [
-              10,
-              10
+              16,
+              [
+                8,
+                8
+              ]
+            ]
+          ]
+        },
+        "line-width": {
+          "stops": [
+            [
+              5,
+              0.1
+            ],
+            [
+              16,
+              18
             ]
           ]
         }
@@ -95,15 +104,14 @@
       "paint": {
         "line-color": "#FFFFFF",
         "line-width": {
-          "base": 1.2,
           "stops": [
             [
-              0,
-              0
+              5,
+              0.1
             ],
             [
-              10,
-              5
+              16,
+              14
             ]
           ]
         }

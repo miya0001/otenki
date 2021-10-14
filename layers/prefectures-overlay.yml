@@ -1,6 +1,6 @@
-id: prefectures
+id: prefectures-overlay
 type: fill
 source: geolonia-prefectures
 source-layer: prefectures
 paint:
-  fill-color: "#248733"
+  fill-color: transparent
