@@ -1,23 +1,13 @@
 version: 8
 name: Otenki
-metadata: {}
 sources:
-  oceanus:
-    type: vector
-    url: https://tileserver.geolonia.com/oceanus/tiles.json?key=YOUR-API-KEY
-  geolonia-water:
-    type: vector
-    url: https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY
-  geolonia:
-    type: vector
-    url: https://tileserver.geolonia.com/v2/tiles.json?key=YOUR-API-KEY
   geolonia-prefectures:
     type: vector
     url: https://cdn.geolonia.com/tiles/japanese-prefectures.json
   dem:
     type: raster-dem
     tiles:
-    - https://tileserver.geolonia.com/gsi-dem/tiles/{z}/{x}/{y}.png?key=YOUR-API-KEY 
+    - https://tileserver.geolonia.com/gsi-dem/tiles/{z}/{x}/{y}.png?key=YOUR-API-KEY
 sprite: https://sprites.geolonia.com/basic
 glyphs: https://glyphs.geolonia.com/{fontstack}/{range}.pbf
 layers:
@@ -26,4 +16,3 @@ layers:
   - !!inc/file layers/hillshading.yml
   - !!inc/file layers/prefectures-line-blur.yml
   - !!inc/file layers/prefectures-line.yml
-  
