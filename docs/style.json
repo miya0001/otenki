@@ -55,6 +55,36 @@
       }
     },
     {
+      "id": "prefectures-line-blur",
+      "type": "line",
+      "source": "geolonia-prefectures",
+      "source-layer": "prefectures",
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#000000",
+        "line-blur": 10,
+        "line-translate": [
+          1,
+          1
+        ],
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              0,
+              2
+            ],
+            [
+              10,
+              10
+            ]
+          ]
+        }
+      }
+    },
+    {
       "id": "prefectures-line",
       "type": "line",
       "source": "geolonia-prefectures",
@@ -73,7 +103,7 @@
             ],
             [
               10,
-              4
+              5
             ]
           ]
         }
