@@ -3,7 +3,7 @@ type: line
 source: geolonia-prefectures
 source-layer: prefectures
 layout:
-  line-cap: round
+  line-join: round
 paint:
   line-color: "#000000"
   line-blur: 5
