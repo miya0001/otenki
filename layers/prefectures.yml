@@ -1,0 +1,6 @@
+id: prefectures
+type: fill
+source: geolonia-prefectures
+source-layer: prefectures
+paint:
+  fill-color: "#14921E"

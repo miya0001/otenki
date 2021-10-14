@@ -1,0 +1,8 @@
+id: prefectures-extrusion
+type: fill-extrusion
+source: geolonia-prefectures
+source-layer: prefectures
+paint:
+  fill-extrusion-color: "#ff0000"
+  fill-extrusion-height: 1000
+  fill-extrusion-opacity: 0.9

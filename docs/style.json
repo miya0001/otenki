@@ -1,0 +1,83 @@
+{
+  "version": 8,
+  "name": "Otenki",
+  "metadata": {},
+  "sources": {
+    "oceanus": {
+      "type": "vector",
+      "url": "https://tileserver.geolonia.com/oceanus/tiles.json?key=YOUR-API-KEY"
+    },
+    "geolonia-water": {
+      "type": "vector",
+      "url": "https://tileserver.geolonia.com/water/tiles.json?key=YOUR-API-KEY"
+    },
+    "geolonia": {
+      "type": "vector",
+      "url": "https://tileserver.geolonia.com/v2/tiles.json?key=YOUR-API-KEY"
+    },
+    "geolonia-prefectures": {
+      "type": "vector",
+      "url": "https://cdn.geolonia.com/tiles/japanese-prefectures.json"
+    },
+    "dem": {
+      "type": "raster-dem",
+      "tiles": [
+        "https://tileserver.geolonia.com/gsi-dem/tiles/{z}/{x}/{y}.png?key=YOUR-API-KEY"
+      ]
+    }
+  },
+  "sprite": "https://sprites.geolonia.com/basic",
+  "glyphs": "https://glyphs.geolonia.com/{fontstack}/{range}.pbf",
+  "layers": [
+    {
+      "id": "background",
+      "type": "background",
+      "paint": {
+        "background-color": "#143E87"
+      }
+    },
+    {
+      "id": "prefectures",
+      "type": "fill",
+      "source": "geolonia-prefectures",
+      "source-layer": "prefectures",
+      "paint": {
+        "fill-color": "#14921E"
+      }
+    },
+    {
+      "id": "hillshading",
+      "source": "dem",
+      "type": "hillshade",
+      "paint": {
+        "hillshade-exaggeration": 0.2,
+        "hillshade-shadow-color": "#14921E"
+      }
+    },
+    {
+      "id": "prefectures-line",
+      "type": "line",
+      "source": "geolonia-prefectures",
+      "source-layer": "prefectures",
+      "layout": {
+        "line-cap": "round"
+      },
+      "paint": {
+        "line-color": "#FFFFFF",
+        "line-width": {
+          "base": 1.2,
+          "stops": [
+            [
+              0,
+              0
+            ],
+            [
+              10,
+              4
+            ]
+          ]
+        }
+      }
+    }
+  ]
+}
