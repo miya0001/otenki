@@ -24,5 +24,6 @@ layers:
   - !!inc/file layers/background.yml
   - !!inc/file layers/prefectures.yml
   - !!inc/file layers/hillshading.yml
+  - !!inc/file layers/prefectures-line-blur.yml
   - !!inc/file layers/prefectures-line.yml
   
