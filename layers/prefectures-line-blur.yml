@@ -6,16 +6,16 @@ layout:
   line-cap: round
 paint:
   line-color: "#000000"
-  line-blur: 10
+  line-blur: 5
   line-translate:
     stops:
       - - 5
-        - [0.1, 0.1]
+        - [0.5, 0.5]
       - - 16
         - [8, 8]
   line-width:
     stops:
       - - 5
-        - 0.1
+        - 0.5
       - - 16
         - 18

@@ -60,14 +60,14 @@
       },
       "paint": {
         "line-color": "#000000",
-        "line-blur": 10,
+        "line-blur": 5,
         "line-translate": {
           "stops": [
             [
               5,
               [
-                0.1,
-                0.1
+                0.5,
+                0.5
               ]
             ],
             [
@@ -83,7 +83,7 @@
           "stops": [
             [
               5,
-              0.1
+              0.5
             ],
             [
               16,
@@ -99,7 +99,7 @@
       "source": "geolonia-prefectures",
       "source-layer": "prefectures",
       "layout": {
-        "line-cap": "round"
+        "line-join": "bevel"
       },
       "paint": {
         "line-color": "#FFFFFF",
