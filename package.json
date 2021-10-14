@@ -1,0 +1,27 @@
+{
+  "name": "otenki",
+  "version": "1.0.0",
+  "description": "https://miya0001.github.io/otenki/",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "start": "charites serve style.yml",
+    "build": "charites build style.yml docs/style.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miya0001/otenki.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miya0001/otenki/issues"
+  },
+  "homepage": "https://github.com/miya0001/otenki#readme",
+  "devDependencies": {
+    "@unvt/charites": "^0.1.1"
+  }
+}
