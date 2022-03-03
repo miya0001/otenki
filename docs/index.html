@@ -34,19 +34,24 @@
     map.on('load', () => {
       map.on('click', 'prefectures-overlay', (e) => {
         const pref = e.features[0].properties.name
-        map.addLaeyer({
-        "id": `overlay-${pref}`,
-        "type": "fill",
-        "source": "geolonia-prefectures",
-        "source-layer": "geolonia-prefectures",
-        "filter": [
-          "==",
-          "name",
-          pref
-        ],
-        "paint": {
-          "fill-color": "#ff0000"
-        })
+        console.log(pref)
+        map.addLayer({
+          "id": `overlay-${pref}`,
+          "type": "fill",
+          "source": "geolonia-prefectures",
+          "source-layer": "prefectures",
+          "filter": [
+            "==",
+            "name",
+            pref
+          ],
+          "paint": {
+            "fill-color": "#ff0000"
+          }
+        }, "prefectures-line")
+
+        const style = map.getStyle()
+        console.log(JSON.stringify(style, '', '  '))
       });
     })
 </script>
