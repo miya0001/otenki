@@ -35,7 +35,7 @@
       map.on('click', 'prefectures-overlay', (e) => {
         const pref = e.features[0].properties.name
         map.addLaeyer({
-  "id": `overlay-${pref}`,
+  "id": "overlay-" + pref,
   "type": "fill",
   "source": "geolonia-prefectures",
   "source-layer": "geolonia-prefectures",
